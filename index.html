@@ -9,6 +9,21 @@
 
 <body>
   <script>
+    const secretCode = 'manuhdez';
+    const inputCode = [];
+
+    window.addEventListener('keyup', (e) => {
+      inputCode.push(e.key);
+      if (inputCode.length > secretCode.length) {
+        inputCode.shift();
+      }
+
+      if (inputCode.join('') == secretCode) {
+        console.log('You made it!');
+      }
+    });
+
+
 
   </script>
 </body>
